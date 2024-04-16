@@ -1,0 +1,126 @@
+{% extends 'main-layout.html' %}
+
+{% block content %}
+<body>
+  <!-- <div class="welcome-area">
+    <a href="https://github.com/Kristian-480"><i class="fa fa-github small home-links"></i></a>
+    <a href="https://www.linkedin.com/in/kristian-richards-1872092a7/"><i class="fa fa-linkedin small home-links"></i></a>
+    <div class="full-page-text3">
+      Hello, I'm
+    </div>
+    <div class="full-page-text">
+      KRISTIAN RICHARDS</div>
+    <hr class="welcome-divider">
+    <div class="full-page-text2">WEB DEVELOPER<br>SOFTWARE DEVELOPER
+    </div>
+    
+    <div class="proceed-button" onclick="addAni()">
+      <div class="proceed-label">
+        <h4>Click To Proceed</h4>
+      </div>
+      <?xml version="1.0" ?><!DOCTYPE svg  PUBLIC '-//W3C//DTD SVG 1.1//EN'  'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'><svg enable-background="new 0 0 26 26" height="26px" id="Layer_1" version="1.1" viewBox="0 0 26 26" width="156px" preserveAspectRatio=“none” xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g><polygon fill="#fff" points="0.046,2.582 2.13,0.498 12.967,11.334 23.803,0.498 25.887,2.582 12.967,15.502  "/><polygon fill="#fff" points="0.046,13.582 2.13,11.498 12.967,22.334 23.803,11.498 25.887,13.582 12.967,26.502  "/></g></svg>
+    </div> -->
+
+  <!-- </div> -->
+  <div class="main-site">
+    <button class="next btn" onclick="plusSlides(1)">Next</button>
+    <button class="prev btn" onclick="plusSlides(-1)">Prev</button>
+    <div class="main-info welc active">
+      <h2>Who I Am</h2>
+      <div class="scroller" data-speed="fast">
+        <ul class="tag-list scroller__inner">
+          <li>HTML</li><li>CSS</li><li>JavaScript</li><li>SQL</li><li>Python</li><li>Flask</li><li>C</li><li>C++</li><li>Java</li>
+          <li>HTML</li><li>CSS</li><li>JavaScript</li><li>SQL</li><li>Python</li><li>Flask</li><li>C</li><li>C++</li><li>Java</li>
+        </ul>
+      </div>
+      </div>
+    </div>
+
+    <div class="main-info qual">
+      Info goes here
+    </div>  
+
+    <div class="main-info port">
+      Info goes here
+    </div>
+  </div>
+
+  <script>
+
+    let slideIndex = 1;
+    let colorIndex = 1;
+    let colorsArr=["#d9dddc","#323232","green"]
+    //linear-gradient(rgba(21,0,27,1) 0%, rgba(144,0,187,1) 25%, rgba(196,0,255,1) 50%, rgba(144,0,187,1) 75%, rgba(21,0,27,1) 100%)
+
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+      bgSwap(colorIndex+=n)
+    }
+
+    function bgSwap(n){
+      let body=document.body;
+      body.style.background = colorsArr[colorIndex-1];
+    }
+    function showSlides(n) {
+      let i;
+      document.getElementById
+      let slides = document.getElementsByClassName("main-info");
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+       slides[i].classList.remove("active");
+      }
+      slides[slideIndex-1].classList.add("active");
+   }
+   function addAni(){
+      let right = document.getElementsByClassName("full-page-text3");
+      let left = document.getElementsByClassName("full-page-text2");
+      let title = document.getElementsByClassName("full-page-text");
+      let divider = document.getElementsByClassName("welcome-divider");
+      let welcomeSection =document.getElementsByClassName("welcome-area");
+      let mainInfo = document.getElementsByClassName("main-info");
+      let mainSite =document.getElementsByClassName("main-site");
+      right[0].classList.add("right-ani");
+      left[0].classList.add("left-ani");
+      title[0].classList.add("fadeout");
+      divider[0].classList.add("fadeout");
+      welcomeSection[0].classList.add("fadeout");
+      mainInfo[0].classList.add("fadein");
+      mainSite[0].style.display="block";
+   }
+
+   const scrollers = document.querySelectorAll(".scroller");
+
+// If a user hasn't opted in for recuded motion, then we add the animation
+if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+  addAnimation();
+}
+
+function addAnimation() {
+  scrollers.forEach((scroller) => {
+    // add data-animated="true" to every `.scroller` on the page
+    scroller.setAttribute("data-animated", true);
+
+    // Make an array from the elements within `.scroller-inner`
+    const scrollerInner = scroller.querySelector(".scroller__inner");
+    const scrollerContent = Array.from(scrollerInner.children);
+
+    // For each item in the array, clone it
+    // add aria-hidden to it
+    // add it into the `.scroller-inner`
+    scrollerContent.forEach((item) => {
+      const duplicatedItem = item.cloneNode(true);
+      duplicatedItem.setAttribute("aria-hidden", true);
+      scrollerInner.appendChild(duplicatedItem);
+    });
+  });
+}
+  </script>
+</body>
+<style>
+  .container{
+    width:100vw;
+    max-width: 100%;
+}
+</style>
+{% endblock %}

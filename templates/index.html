@@ -1,13 +1,300 @@
 {% extends 'layout.html' %}
 
-{% block body %}
-<div class="jumbotron">
-    <h1 class="display-4">Bootstrap starter template by {{ app_data['author'] }} </h1>
-    <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
-    <p>Title: {{ app_data['html_title'] }}</p>
+{% block content %}
+<body>
+  <div class="welcome-area">
+    <a href="https://github.com/Kristian-480" target="_blank"><i class="fa fa-github small home-links"></i></a>
+    <a href="https://www.linkedin.com/in/kristian-richards-1872092a7/" target="_blank"><i class="fa fa-linkedin small home-links"></i></a>
+    <div class="full-page-text3">
+      Hello, I'm
+    </div>
+    <div class="full-page-text">
+      KRISTIAN RICHARDS</div>
+    <hr class="welcome-divider">
+    <div class="full-page-text2">WEB DEVELOPER<br>SOFTWARE DEVELOPER
+    </div>
+    
+    <div class="proceed-button" onclick="addAni()">
+      <div class="proceed-label">
+        <h4>Click To Proceed</h4>
+      </div>
+      <?xml version="1.0" ?><!DOCTYPE svg  PUBLIC '-//W3C//DTD SVG 1.1//EN'  'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'><svg enable-background="new 0 0 26 26" height="26px" id="Layer_1" version="1.1" viewBox="0 0 26 26" width="156px" preserveAspectRatio=“none” xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g><polygon fill="#fff" points="0.046,2.582 2.13,0.498 12.967,11.334 23.803,0.498 25.887,2.582 12.967,15.502  "/><polygon fill="#fff" points="0.046,13.582 2.13,11.498 12.967,22.334 23.803,11.498 25.887,13.582 12.967,26.502  "/></g></svg>
+    </div>
 
-    <hr class="my-4">
-    <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-    <a class="btn btn-primary btn-lg" href="/contact" role="button">Contact</a>
   </div>
+  <div class="main-site">
+    <div class="main-header">
+      <h1>About Me</h1>
+    </div>
+
+    <div class="main-info welc active">
+      <h2>Who I Am</h2>
+      <p>University graduate and former intern passionate about creating effective and innovative software and web solutions.
+      </p>
+      <div class="programmer-ill">
+        <img src="../static/undraw_programming_re_kg9v.svg"/>
+      </div>
+    </div>
+
+    <div class="main-info qual">
+      <h2>My Skills</h2>
+      <div class="qual-web">
+        <h3>Web Skills</h3>
+      </div>
+      <div class="qual-gen">
+        <h3>General Skills</h3>
+      </div>
+    </div>  
+
+    <div class="main-info more-info">
+      <h2>More on me</h2>
+      <p>Graduated as a <b>Computer Science</b> major while mainly doing coding courses to learn various languages and practices.
+      </p>
+      <p>After graduating I honed my coding skills, particularly in web development, mainly self-taught via YouTube tutorials and online forums.
+      </p>
+      <p>Aside from coding I generally spend time watching videos on design trends and practices, editing photos and grinding in MMOs. 
+      </p>
+      <p>Tech aside I spend time writing, watching anime and listening to music.
+      </p>
+    </div>
+  </div>
+
+  <div class="projects">
+    <div class="side-title right-title">Web Apps</div>
+    <div class="side-title left-title">Software</div>
+    <div class="main-header">
+      <h1>Projects</h1>
+    </div>
+    <div class="project-info active">
+      <h3>Here we see a list of projects I've worked on.
+      </h3>
+      <img src="../static/undraw_progressive_app_m-9-ms.svg"/>
+    </div>
+    <div class="project-info proj-list">
+      <h3>Here we see a list of Web projects I've worked on.
+      </h3>
+      <div class="projects-container">
+        <div class="project-example">
+          Project Name
+        </div>
+        <div class="project-example">
+          Project Name
+        </div>
+        <div class="project-example">
+          Project Name
+        </div>
+        <div class="project-example">
+          Project Name
+        </div>
+      </div>
+    </div>
+    <div class="project-info proj-list">
+      <h3>Here we see a list of Software projects I've worked on.
+      </h3>
+    </div>
+  </div>
+
+  <div class="links-section">
+    <div class="main-header">
+      <h1>My Links</h1>
+    </div>
+    <div class="links-info active">
+      <h3>Some of my relevant links.
+      </h3>
+      <div class="links-container">
+        <div class="links-info-item">
+          <a href="../static/Kristian Richards Resume.pdf" target="_blank"><i class="fa fa-file large home-links"></i></a>
+          <p>Resume</p>
+        </div>
+        <div class="links-info-item">
+          <a href="https://github.com/Kristian-480" target="_blank"><i class="fa fa-github large home-links"></i></a>
+          <p>Github</p>
+        </div>
+        <div class="links-info-item">
+          <a href="https://www.linkedin.com/in/kristian-richards-1872092a7/" target="_blank"><i class="fa fa-linkedin large home-links"></i></a>
+          <p>LinkedIn</p>
+        </div>
+      </div>
+    </div> 
+  </div>
+
+  <div class="contact-section">
+    <div class="main-header">
+      <h1>Contact Me</h1>
+    </div>
+    <div class="contact-info active">
+
+      <div class="form-container">
+        <div class="row">
+          <div class="column">
+            <img src="../static/undraw_personal_text_re_vqj3.svg"/>
+          </div>
+          <div class="column">
+            <form action="https://api.web3forms.com/submit" method="POST">
+              <input type="hidden" name="access_key" value="a9094d35-add9-407c-88fb-a28f42c08e64">
+              <input type="hidden" name="redirect" value="/success">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" placeholder="Your name..">
+              <label for="email">Email Address</label>
+              <input type="text" id="email" name="email" placeholder="Your email address..">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" placeholder="Write something.." style="height:170px"></textarea>
+              <input type="submit" value="Submit">
+            </form>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+
+    let slideIndex = 1;
+    let colorIndex = 1;
+
+    let levels=["welcome-area","main-site","projects","links-section","contact-section"]
+    let stages=["main-info","project-info"]
+    let level=1;
+    // let colorsArr=["#d9dddc","#323232","green"]
+    //linear-gradient(rgba(21,0,27,1) 0%, rgba(144,0,187,1) 25%, rgba(196,0,255,1) 50%, rgba(144,0,187,1) 75%, rgba(21,0,27,1) 100%)
+
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+      // bgSwap(colorIndex+=n)
+    }
+
+    // function bgSwap(n){
+    //   let body=document.body;
+    //   body.style.background = colorsArr[colorIndex-1];
+    // }
+    function showSlides(n) {
+      let i;
+      document.getElementById
+      let slides = document.getElementsByClassName(stages[level-1]);
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+       slides[i].classList.remove("active");
+      }
+      slides[slideIndex-1].classList.add("active");
+   }
+   function addAni(){
+      let right = document.getElementsByClassName("full-page-text3");
+      let left = document.getElementsByClassName("full-page-text2");
+      let title = document.getElementsByClassName("full-page-text");
+      let divider = document.getElementsByClassName("welcome-divider");
+      let welcomeSection =document.getElementsByClassName("welcome-area");
+      let mainInfo = document.getElementsByClassName("main-info");
+      let mainSite =document.getElementsByClassName("main-site");
+      let siteMap=document.getElementsByClassName("site-map");
+      let siteArrows=document.getElementsByClassName("site-arrows");
+      let leftbtn = document.getElementsByClassName("prev");
+      let rightbtn = document.getElementsByClassName("next");
+      right[0].classList.add("right-ani");
+      left[0].classList.add("left-ani");
+      title[0].classList.add("fadeout");
+      divider[0].classList.add("fadeout");
+      welcomeSection[0].classList.add("fadeout");
+      mainInfo[0].classList.add("fadein");
+      mainSite[0].style.display="block";
+      siteMap[0].classList.add("fadein");
+      siteArrows[0].classList.add("fadein");
+      siteArrows[1].classList.add("fadein");
+      leftbtn[0].classList.add("fadein");
+      rightbtn[0].classList.add("fadein");
+      console.log("pressed");
+   }
+
+   function revAni(){
+    let right = document.getElementsByClassName("full-page-text3");
+      let left = document.getElementsByClassName("full-page-text2");
+      let title = document.getElementsByClassName("full-page-text");
+      let divider = document.getElementsByClassName("welcome-divider");
+      let welcomeSection =document.getElementsByClassName("welcome-area");
+      let mainInfo = document.getElementsByClassName("main-info");
+      let mainSite =document.getElementsByClassName("main-site");
+      let siteMap=document.getElementsByClassName("site-map");
+      let siteArrows=document.getElementsByClassName("site-arrows");
+      let leftbtn = document.getElementsByClassName("prev");
+      let rightbtn = document.getElementsByClassName("next");
+      right[0].classList.add("right-ani-rev");
+      left[0].classList.add("left-ani-rev");
+      title[0].classList.add("fadeout-rev");
+      divider[0].classList.add("fadeout-rev");
+      welcomeSection[0].classList.add("fadeout-rev");
+      mainInfo[0].classList.add("fadein-rev");
+      mainSite[0].style.display="none";
+      siteMap[0].classList.add("fadein-rev");
+      siteArrows[0].classList.add("fadein-rev");
+      siteArrows[1].classList.add("fadein-rev");
+      leftbtn[0].classList.add("fadein-rev");
+      rightbtn[0].classList.add("fadein-rev");
+   }
+
+
+  
+   function levelUp(n) {
+      let curr=document.getElementsByClassName(levels[level]);
+      curr[0].style.display="none";
+      showLevel(level += n);
+    }
+    function showLevel(n) {
+      if(n!=levels.length-1){
+        let downArrow = document.getElementsByClassName("site-arrows");
+        downArrow[1].style.display="block";
+      }
+
+      if(n==3 || n==4){
+        let leftbtn = document.getElementsByClassName("prev");
+        let rightbtn = document.getElementsByClassName("next");
+        leftbtn[0].style.display="none";
+        rightbtn[0].style.display="none";
+      }
+      else{
+        let leftbtn = document.getElementsByClassName("prev");
+        let rightbtn = document.getElementsByClassName("next");
+        leftbtn[0].style.display="block";
+        rightbtn[0].style.display="block";
+      }
+      
+
+      if(n==levels.length-1){
+        let downArrow = document.getElementsByClassName("site-arrows");
+        downArrow[1].style.display="none";
+        let slides = document.getElementsByClassName(levels[level]);
+        slides[0].style.display="block";
+      }
+      else if (n < 1)
+        revAni();
+      else{
+        let slides = document.getElementsByClassName(levels[level]);
+        slides[0].style.display="block";
+      }
+      // for (i = 0; i < slides.length; i++) {
+      //  slides[i].classList.remove("active");
+      // }
+      // slides[level-1].classList.add("active");
+   }
+
+  </script>
+</body>
+<style>
+  .container{
+    width:100vw;
+    max-width: 100%;
+}
+  .programmer-ill{
+    position: absolute;
+    /* display: inline; */
+    /* border:1px solid red; */
+    width:600px;
+    height: auto;
+    top:0;
+    right:150px;
+  }
+  .programmer-ill>img{
+    transform: scale(.75);
+  }
+</style>
 {% endblock %}
