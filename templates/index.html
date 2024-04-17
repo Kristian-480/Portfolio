@@ -54,7 +54,7 @@
         </ul>
       </div>
       <div class="qual-gen">
-        <h3>General Skills</h3>
+        <h3>Software Skills</h3>
         <ul class="skill-list">
           <li><img src="../static/icons8-c++.svg" width="30px"></i>C++</li>
           <li><img src="../static/icons8-c-programming.svg" width="30px"/>C</li>
@@ -198,6 +198,8 @@
       slides[slideIndex-1].classList.add("active");
    }
    function addAni(){
+    level=1;
+    removeAni();
       let right = document.getElementsByClassName("full-page-text3");
       let left = document.getElementsByClassName("full-page-text2");
       let title = document.getElementsByClassName("full-page-text");
@@ -221,10 +223,11 @@
       siteArrows[1].classList.add("fadein");
       leftbtn[0].classList.add("fadein");
       rightbtn[0].classList.add("fadein");
-      console.log("pressed");
+      // console.log("pressed");
    }
 
    function revAni(){
+    removeAni();
     let right = document.getElementsByClassName("full-page-text3");
       let left = document.getElementsByClassName("full-page-text2");
       let title = document.getElementsByClassName("full-page-text");
@@ -250,6 +253,30 @@
       rightbtn[0].classList.add("fadein-rev");
    }
 
+  function removeAni(){
+    let animations = ["fadein","fadeout","right-ani","left-ani","fadein-rev","fadeout-rev","right-ani-rev","left-ani-rev"];
+
+    let right = document.getElementsByClassName("full-page-text3");
+    let left = document.getElementsByClassName("full-page-text2");
+    let title = document.getElementsByClassName("full-page-text");
+    let divider = document.getElementsByClassName("welcome-divider");
+    let welcomeSection =document.getElementsByClassName("welcome-area");
+    let mainInfo = document.getElementsByClassName("main-info");
+    let mainSite =document.getElementsByClassName("main-site");
+    let siteMap=document.getElementsByClassName("site-map");
+    let siteArrows=document.getElementsByClassName("site-arrows");
+    let leftbtn = document.getElementsByClassName("prev");
+    let rightbtn = document.getElementsByClassName("next");
+
+    let elements = [right[0],left[0],title[0],divider[0],welcomeSection[0],mainInfo[0],mainSite[0],siteMap[0],
+    siteArrows[0],siteArrows[1],leftbtn[0],rightbtn[0]];
+
+    for(let i=0;i<elements.length;i++){
+      for(let k=0;k<elements.length;k++){
+        elements[k].classList.remove(animations[i])
+      }
+    }
+  }
 
   
    function levelUp(n) {
