@@ -2,7 +2,7 @@
 
 {% block content %}
 <body>
-  <div class="welcome-area">
+  <div class="welcome-area active">
     <a href="https://github.com/Kristian-480" target="_blank"><i class="fa fa-github small home-links"></i></a>
     <a href="https://www.linkedin.com/in/kristian-richards-1872092a7/" target="_blank"><i class="fa fa-linkedin small home-links"></i></a>
     <div class="full-page-text3">
@@ -78,12 +78,12 @@
   </div>
 
   <div class="projects">
-    <div class="side-title right-title">Web Apps</div>
-    <div class="side-title left-title">Software</div>
     <div class="main-header">
       <h1>Projects</h1>
     </div>
     <div class="project-info active">
+      <div class="side-title right-title">Web Apps</div>
+      <div class="side-title left-title">Software</div>
       <h3>Here we see a list of projects I've worked on.
       </h3>
       <img src="../static/undraw_progressive_app_m-9-ms.svg"/>
@@ -91,7 +91,7 @@
     <div class="project-info proj-list">
       <h3>Here we see a list of Web projects I've worked on.
       </h3>
-      <div class="projects-container">
+      <!-- <div class="projects-container">
         <div class="project-example">
           Project Name
         </div>
@@ -104,7 +104,7 @@
         <div class="project-example">
           Project Name
         </div>
-      </div>
+      </div> -->
     </div>
     <div class="project-info proj-list">
       <h3>Here we see a list of Software projects I've worked on.
@@ -174,32 +174,38 @@
     let levels=["welcome-area","main-site","projects","links-section","contact-section"]
     let stages=["main-info","project-info"]
     let level=1;
-    // let colorsArr=["#d9dddc","#323232","green"]
-    //linear-gradient(rgba(21,0,27,1) 0%, rgba(144,0,187,1) 25%, rgba(196,0,255,1) 50%, rgba(144,0,187,1) 75%, rgba(21,0,27,1) 100%)
 
     function plusSlides(n) {
+      // removeAni();
       showSlides(slideIndex += n);
-      // bgSwap(colorIndex+=n)
     }
 
-    // function bgSwap(n){
-    //   let body=document.body;
-    //   body.style.background = colorsArr[colorIndex-1];
-    // }
     function showSlides(n) {
       let i;
-      document.getElementById
+
       let slides = document.getElementsByClassName(stages[level-1]);
+      let leftbtn = document.getElementsByClassName("prev");
+      let rightbtn = document.getElementsByClassName("next");
       if (n > slides.length) {slideIndex = 1}
       if (n < 1) {slideIndex = slides.length}
       for (i = 0; i < slides.length; i++) {
        slides[i].classList.remove("active");
       }
       slides[slideIndex-1].classList.add("active");
+      if(level==2 && slideIndex==2){
+        
+        rightbtn[0].style.display="none"
+      }
+      else  if(level==2 && slideIndex==3){
+        leftbtn[0].style.display="none"
+      }
+      else{
+        rightbtn[0].style.display="block"
+        leftbtn[0].style.display="block"
+      }
    }
    function addAni(){
     level=1;
-    removeAni();
       let right = document.getElementsByClassName("full-page-text3");
       let left = document.getElementsByClassName("full-page-text2");
       let title = document.getElementsByClassName("full-page-text");
@@ -207,10 +213,7 @@
       let welcomeSection =document.getElementsByClassName("welcome-area");
       let mainInfo = document.getElementsByClassName("main-info");
       let mainSite =document.getElementsByClassName("main-site");
-      let siteMap=document.getElementsByClassName("site-map");
-      let siteArrows=document.getElementsByClassName("site-arrows");
-      let leftbtn = document.getElementsByClassName("prev");
-      let rightbtn = document.getElementsByClassName("next");
+      let siteControls = document.getElementsByClassName("controls-container")
       right[0].classList.add("right-ani");
       left[0].classList.add("left-ani");
       title[0].classList.add("fadeout");
@@ -218,40 +221,39 @@
       welcomeSection[0].classList.add("fadeout");
       mainInfo[0].classList.add("fadein");
       mainSite[0].style.display="block";
-      siteMap[0].classList.add("fadein");
-      siteArrows[0].classList.add("fadein");
-      siteArrows[1].classList.add("fadein");
-      leftbtn[0].classList.add("fadein");
-      rightbtn[0].classList.add("fadein");
-      // console.log("pressed");
+      setTimeout(deactivate,750,welcomeSection[0]);
+      setTimeout(removeAni,1500);
+      setTimeout(show,1500,siteControls[0]);
    }
+  
+  function show(element){
+    element.style.display="block";
+  }
+  function deactivate(element){
+    element.classList.remove("active")
+  }
+  function revAni(){
 
-   function revAni(){
-    removeAni();
+    console.log("Reversed");
     let right = document.getElementsByClassName("full-page-text3");
-      let left = document.getElementsByClassName("full-page-text2");
-      let title = document.getElementsByClassName("full-page-text");
-      let divider = document.getElementsByClassName("welcome-divider");
-      let welcomeSection =document.getElementsByClassName("welcome-area");
-      let mainInfo = document.getElementsByClassName("main-info");
-      let mainSite =document.getElementsByClassName("main-site");
-      let siteMap=document.getElementsByClassName("site-map");
-      let siteArrows=document.getElementsByClassName("site-arrows");
-      let leftbtn = document.getElementsByClassName("prev");
-      let rightbtn = document.getElementsByClassName("next");
-      right[0].classList.add("right-ani-rev");
-      left[0].classList.add("left-ani-rev");
-      title[0].classList.add("fadeout-rev");
-      divider[0].classList.add("fadeout-rev");
-      welcomeSection[0].classList.add("fadeout-rev");
-      mainInfo[0].classList.add("fadein-rev");
-      mainSite[0].style.display="none";
-      siteMap[0].classList.add("fadein-rev");
-      siteArrows[0].classList.add("fadein-rev");
-      siteArrows[1].classList.add("fadein-rev");
-      leftbtn[0].classList.add("fadein-rev");
-      rightbtn[0].classList.add("fadein-rev");
-   }
+    let left = document.getElementsByClassName("full-page-text2");
+    let title = document.getElementsByClassName("full-page-text");
+    let divider = document.getElementsByClassName("welcome-divider");
+    let welcomeSection =document.getElementsByClassName("welcome-area");
+    let mainInfo = document.getElementsByClassName("main-info");
+    let mainSite =document.getElementsByClassName("main-site");
+    let siteControls = document.getElementsByClassName("controls-container")
+    right[0].classList.add("right-ani-rev");
+    left[0].classList.add("left-ani-rev");
+    title[0].classList.add("fadeout-rev");
+    divider[0].classList.add("fadeout-rev");
+    welcomeSection[0].classList.add("fadeout-rev");
+    mainInfo[0].classList.add("fadein-rev");
+    mainSite[0].style.display="none";
+    siteControls[0].style.display="none";
+    setTimeout(removeAni,750);
+    setTimeout(welcomeSection[0].classList.add("active"),750);
+  }
 
   function removeAni(){
     let animations = ["fadein","fadeout","right-ani","left-ani","fadein-rev","fadeout-rev","right-ani-rev","left-ani-rev"];
@@ -268,23 +270,29 @@
     let leftbtn = document.getElementsByClassName("prev");
     let rightbtn = document.getElementsByClassName("next");
 
-    let elements = [right[0],left[0],title[0],divider[0],welcomeSection[0],mainInfo[0],mainSite[0],siteMap[0],
+    let elements = [right[0],left[0],title[0],divider[0],welcomeSection[0],mainSite[0],mainInfo[0],siteMap[0],
     siteArrows[0],siteArrows[1],leftbtn[0],rightbtn[0]];
 
-    for(let i=0;i<elements.length;i++){
+    for(let i=0;i<animations.length;i++){
       for(let k=0;k<elements.length;k++){
-        elements[k].classList.remove(animations[i])
+        if(elements[k].classList.contains(animations[i])){
+          elements[k].classList.remove(animations[i])
+          // console.log(`removed ${animations[i]} from ${elements[k].className} now class has ${elements[k].classList}`)
+        }
+        
       }
     }
   }
 
   
    function levelUp(n) {
+    // removeAni()
       let curr=document.getElementsByClassName(levels[level]);
       curr[0].style.display="none";
       showLevel(level += n);
     }
     function showLevel(n) {
+      // console.log(n)
       if(n!=levels.length-1){
         let downArrow = document.getElementsByClassName("site-arrows");
         downArrow[1].style.display="block";
@@ -310,8 +318,10 @@
         let slides = document.getElementsByClassName(levels[level]);
         slides[0].style.display="block";
       }
-      else if (n < 1)
+      else if (n == 0){
+        // console.log("edge")
         revAni();
+      }
       else{
         let slides = document.getElementsByClassName(levels[level]);
         slides[0].style.display="block";

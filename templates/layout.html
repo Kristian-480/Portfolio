@@ -20,23 +20,26 @@
 
   <body>
     <div class="container" id="content">{% block content %}{% endblock %}</div>
-    <span style="cursor: pointer;" class="next site-arrows-vert" onclick="plusSlides(1)"><i class="material-icons medium">keyboard_arrow_right</i></span>
-    <span style="cursor: pointer;" class="prev site-arrows-vert" onclick="plusSlides(-1)"><i class="material-icons medium">keyboard_arrow_left</i></span>
     
-    <div class="site-map">
-      <span style="cursor: pointer;" class="site-map-image">
-        <img src="../static/site-map.png">
-      </span>
-    </div>
-    <div class="site-arrows">
-      <span style="cursor: pointer;" class="site-map-image" onclick="levelUp(-1)">
-        <i class="material-icons large">keyboard_arrow_up</i>
-      </span>
-    </div>
-    <div class="site-arrows">
-      <span style="cursor: pointer;" class="site-map-image" onclick="levelUp(1)">
-        <i class="material-icons large">keyboard_arrow_down</i>
-      </span>
+    <div class="controls-container">
+      <span style="cursor: pointer;" class="next site-arrows-vert" onclick="plusSlides(1)"><i class="material-icons medium">keyboard_arrow_right</i></span>
+      <span style="cursor: pointer;" class="prev site-arrows-vert" onclick="plusSlides(-1)"><i class="material-icons medium">keyboard_arrow_left</i></span>
+      
+      <div class="site-map">
+        <span style="cursor: pointer;" class="site-map-image">
+          <img src="../static/site-map.png">
+        </span>
+      </div>
+      <div class="site-arrows">
+        <span style="cursor: pointer;" class="site-map-image" onclick="levelUp(-1)">
+          <i class="material-icons large">keyboard_arrow_up</i>
+        </span>
+      </div>
+      <div class="site-arrows">
+        <span style="cursor: pointer;" class="site-map-image" onclick="levelUp(1)">
+          <i class="material-icons large">keyboard_arrow_down</i>
+        </span>
+      </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
@@ -68,36 +71,37 @@
   //     slides[slideIndex-1].classList.add("active");
   //  }
 
-   function revAni(){
-    let right = document.getElementsByClassName("full-page-text3");
-      let left = document.getElementsByClassName("full-page-text2");
-      let title = document.getElementsByClassName("full-page-text");
-      let divider = document.getElementsByClassName("welcome-divider");
-      let welcomeSection =document.getElementsByClassName("welcome-area");
-      let mainInfo = document.getElementsByClassName("main-info");
-      let mainSite =document.getElementsByClassName("main-site");
-      let siteMap=document.getElementsByClassName("site-map");
-      let siteArrows=document.getElementsByClassName("site-arrows");
-      let leftbtn = document.getElementsByClassName("prev");
-      let rightbtn = document.getElementsByClassName("next");
-      right[0].classList.add("right-ani-rev");
-      left[0].classList.add("left-ani-rev");
-      title[0].classList.add("fadeout-rev");
-      divider[0].classList.add("fadeout-rev");
-      welcomeSection[0].classList.add("fadeout-rev");
-      mainInfo[0].classList.add("fadein-rev");
-      mainSite[0].style.display="none";
-      siteMap[0].classList.add("fadein-rev");
-      siteArrows[0].classList.add("fadein-rev");
-      siteArrows[1].classList.add("fadein-rev");
-      leftbtn[0].classList.add("fadein-rev");
-      rightbtn[0].classList.add("fadein-rev");
-   }
+  //  function revAni(){
+  //   let right = document.getElementsByClassName("full-page-text3");
+  //     let left = document.getElementsByClassName("full-page-text2");
+  //     let title = document.getElementsByClassName("full-page-text");
+  //     let divider = document.getElementsByClassName("welcome-divider");
+  //     let welcomeSection =document.getElementsByClassName("welcome-area");
+  //     let mainInfo = document.getElementsByClassName("main-info");
+  //     let mainSite =document.getElementsByClassName("main-site");
+  //     let siteMap=document.getElementsByClassName("site-map");
+  //     let siteArrows=document.getElementsByClassName("site-arrows");
+  //     let leftbtn = document.getElementsByClassName("prev");
+  //     let rightbtn = document.getElementsByClassName("next");
+  //     right[0].classList.add("right-ani-rev");
+  //     left[0].classList.add("left-ani-rev");
+  //     title[0].classList.add("fadeout-rev");
+  //     divider[0].classList.add("fadeout-rev");
+  //     welcomeSection[0].classList.add("fadeout-rev");
+  //     mainInfo[0].classList.add("fadein-rev");
+  //     mainSite[0].style.display="none";
+  //     siteMap[0].classList.add("fadein-rev");
+  //     siteArrows[0].classList.add("fadein-rev");
+  //     siteArrows[1].classList.add("fadein-rev");
+  //     leftbtn[0].classList.add("fadein-rev");
+  //     rightbtn[0].classList.add("fadein-rev");
+  //  }
     </script>
   </body>
   <style>
     .site-map{
-      opacity: 0;
+      /* display: none; */
+      /* opacity: 0; */
       position: absolute;
       border: 1px solid black;
       border-radius: 15px;
@@ -121,7 +125,7 @@
     }
     .site-arrows{
       /* display: none; */
-      opacity: 0;
+      /* opacity: 0; */
       position: absolute;
       /* border: 1px solid black; */
       border-radius: 15px;
@@ -137,5 +141,9 @@
     /* .site-arrows-vert{
       border: 1px solid black;
     } */
+    .controls-container{
+      display: none;
+      transition: all 1s ease-in-out;
+    }
   </style>
 </html>
