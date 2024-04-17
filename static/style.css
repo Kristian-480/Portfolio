@@ -204,24 +204,40 @@ body{
 
 .qual.active{
     position: relative;
+    padding-top: 100px;
     display: flex;
     flex-direction: row;
-    padding-left: 50px;
+    padding-inline: 50px;
     height: 80vh;
     width: 80%;
-    border: 10px solid black;
+    /* border: 10px solid black; */
 }
-.qual.active>h2{
-    padding-top: 100px;
+/* .qual.active>h2{
     width:30%;
-}
+} */
 .qual-web{
-    background-color: #24243d;
-    width:30%;
+    width:50%;
+    position: relative;
+    padding-left: 150px;
+}
+.skill-list{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+.skill-list li{
+    width: 50%;
+    margin-block: 10px;
+    /* border:2px solid blue; */
+}
+.skill-list li img,.skill-list li i{
+    margin-right: 5px;
 }
 .qual-gen{
-    background-color: red;
-    width:30%;
+    width:50%;
+    position: relative;
+    padding-left: 150px;
 }
 .more-info.active{
     position: relative;
