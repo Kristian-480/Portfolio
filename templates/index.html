@@ -77,7 +77,7 @@
     </div>
   </div>
 
-  <div class="projects">
+  <div class="projects"> 
     <div class="main-header">
       <h1>Projects</h1>
     </div>
@@ -91,20 +91,103 @@
     <div class="project-info proj-list">
       <h3>Here we see a list of Web projects I've worked on.
       </h3>
-      <!-- <div class="projects-container">
-        <div class="project-example">
-          Project Name
+      <div class="projects-container">
+        <div class="project-example" onclick="showProject(1)">
+          <div class="project-title">Portfolio Website</div>
+          <div class="project-thumb"><img src="../static/Portfolio-thumb.png"/></div>
+          <p>Click for more info</p>
         </div>
-        <div class="project-example">
-          Project Name
+        <div class="project-display">
+          <span style="font-size: x-large;position: absolute;top:.75%;right: 1.25%;cursor: pointer;" onclick="closeProj()">&times</span>
+          <div class="project-image" style="border:#323232 solid 1px">
+            <img src="../static/Portfolio-thumb.png"/>
+          </div>
+          <div class="project-specs">
+            <h5>Technology used</h5>
+            <ul class="skill-list">
+              <li><i class="fa fa-html5 small"></i>HTML</li>
+              <li><i class="fa-brands fa-css3-alt small"></i></i>CSS</li>
+              <li><i class="fa-brands fa-js small"></i>Javascript</li>
+    
+              <li><i class="fa-brands fa-python small"></i>Python</li>
+              <li><img src="../static/Flask.svg" width="25px"/>Flask</li>
+            </ul>
+            Links:
+            <a href="#">Documentation,</a>
+            <a href="#">Repository</a>
+          </div>
+          <div class="project-description">
+            <p>My Portfolio website made from scratch as a basic flask/python app showing the use of web coding languages such as 
+              CSS, HTML and JavaScript as well as minimalist and typography design styles. The design is somewhat based on gaming
+            as listed in the about me being an interest, thus the site controls are set up as up, down, left, right and requiring
+          hitting start (clicking proceed) to use the website.</p>
+          </div>
         </div>
-        <div class="project-example">
-          Project Name
+        <div class="project-example" onclick="showProject(2)">
+          <div class="project-title">Recommendation Application</div>
+          <div class="project-thumb"><img src="../static/Recom-thumb.png" alt="Recommendation-Thumbnail"/></div>
+          <p>Click for more info</p>
         </div>
-        <div class="project-example">
-          Project Name
+        <div class="project-display">
+          <span style="font-size: x-large;position: absolute;top:.75%;right: 1.25%;cursor: pointer;" onclick="closeProj()">&times</span>
+          <div class="project-image" style="border:#323232 solid 1px">
+            <img src="../static/Recom-thumb.png" alt="Recommendation-Thumbnail"/>
+          </div>
+          <div class="project-specs">
+            <h5>Technology used</h5>
+            <ul class="skill-list">
+              <li><i class="fa fa-html5 small"></i>HTML</li>
+              <li><i class="fa-brands fa-css3-alt small"></i></i>CSS</li>
+              <li><i class="fa-brands fa-js small"></i>Javascript</li>
+    
+              <li><i class="fa-brands fa-python small"></i>Python</li>
+              <li><img src="../static/Flask.svg" width="25px"/>Flask</li>
+            </ul>
+            Links:
+            <a href="#">Documentation,</a>
+            <a href="#">Repository</a>
+          </div>
+          <div class="project-description">
+            <p>First major University project. A website that allows students to sign in and request recommendations from teachers.
+              This utilizes a python/flask backend handling routes and model controllers as well as SQL database manipulation. Login 
+              functionality is also included and user specific functions are set in place where specific parties are permitted to 
+              interact with recommendations and requests in their respective manners.
+            </p>
+          </div>
         </div>
-      </div> -->
+        <div class="project-example" onclick="showProject(3)">
+          <div class="project-title">Morphological Module</div>
+          <div class="project-thumb"><img src="../static/Morpho-thumb.png" alt="Morpho-Thumbnail"/></div>
+          <p>Click for more info</p>
+        </div>
+        <div class="project-display">
+          <span style="font-size: x-large;position: absolute;top:.75%;right: 1.25%;cursor: pointer;" onclick="closeProj()">&times</span>
+          <div class="project-image" style="border:#323232 solid 1px">
+            <img src="../static/Morpho-thumb.png" alt="Morpho-thumbnail"/>
+          </div>
+          <div class="project-specs">
+            <h5>Technology used</h5>
+            <ul class="skill-list">
+              <li><i class="fa-brands fa-python small"></i>Python</li>
+              <li><img src="../static/Flask.svg" width="25px"/>Flask</li>
+              <li><img src="../static/api-svgrepo-com.svg" width="25px"/>RestAPI</li>
+            </ul>
+            Links:
+            <a href="#">Documentation,</a>
+            <a href="#">Repository</a>
+          </div>
+          <div class="project-description">
+            <p>An API made for educational purposes. Consists of a series of algorithms that when given a word can produce:
+              <li>An example sentence(Or allow for one to be entered)</li>  <li>A definition of the word</li>
+              <li>A list of words of the same word family.</li>  <li>A list of words with similar prefixes/suffixes.</li>
+              <li>A list of words that contain the same morpheme.</li>
+            </p>
+          </div>
+        </div>
+        <!-- <div class="project-example">
+          Project Name
+        </div> -->
+      </div>
     </div>
     <div class="project-info proj-list">
       <h3>Here we see a list of Software projects I've worked on.
@@ -331,7 +414,15 @@
       // }
       // slides[level-1].classList.add("active");
    }
-
+   function showProject(n){
+    let projects=document.getElementsByClassName("project-display");
+    projects[n-1].style.display="block";
+   }
+   function closeProj(){
+    let projects=document.getElementsByClassName("project-display");
+    for(let i=0;i<projects.length;i++)
+      projects[i].style.display="none"
+   }
   </script>
 </body>
 <style>
