@@ -435,18 +435,19 @@ body{
         right:5%;
     }
     .full-page-text{
-        top:15%;
+        top:20%;
         font-size: 5em;
         text-align: left;
     }
     .full-page-text2{
         font-size: 2em;
-        top:50%;
+        top:55%;
         left:0;
     }
     .full-page-text3{
         position: absolute;
         text-align: left;
+        top:10%;
         font-size: 3em;
         left: 0;
     }
