@@ -63,6 +63,7 @@ body{
     font-weight: 700;
     font-size: 9.5em;
 }
+
 /* @media only screen and (min-width: 992px) {
     .full-page-text{
         font-size: 8em;
@@ -118,6 +119,7 @@ body{
     font-weight: 400;
     font-size: 6em;
 }
+
 .welcome-divider{
     position: absolute;
     top: 65%;
@@ -128,6 +130,7 @@ body{
     margin-bottom: 50px;
     width:95%;
 }
+
 .next{
     /* opacity:0; */
     position: absolute;
@@ -170,6 +173,7 @@ body{
     border-radius: 2px;
     background: linear-gradient(111.3deg, #005959 9.6%, #323232 93.6%);
   }
+
 .main-info{
     position: relative;
     display: none;
@@ -209,6 +213,18 @@ body{
     font-family: 'Supreme', sans-serif;
     font-size: large;
 }
+.programmer-ill{
+    position: absolute;
+    /* display: inline; */
+    /* border:1px solid red; */
+    width:600px;
+    height: auto;
+    top:0;
+    right:150px;
+  }
+  .programmer-ill>img{
+    transform: scale(.75);
+  }
 
 .qual.active{
     position: relative;
@@ -368,6 +384,7 @@ body{
     left:-50px;
     top:42%;
 }
+
 .links-section{
     display: none;
     height: 100%;
@@ -399,6 +416,84 @@ body{
     /* border:2px solid gold; */
     width:300px;
     text-align: center;
+}
+  /*mobile scaling*/
+  @media only screen and (max-width: 600px){  
+    .next{
+        right:5px;
+    }
+    
+    .prev{
+        left:5px;
+    }
+    .proceed-button{
+        bottom:50px;
+        cursor: pointer;
+        width:90%;
+        height: 50px;
+        padding-top: 10px;
+        right:5%;
+    }
+    .full-page-text{
+        top:15%;
+        font-size: 5em;
+        text-align: left;
+    }
+    .full-page-text2{
+        font-size: 2em;
+        top:50%;
+        left:0;
+    }
+    .full-page-text3{
+        position: absolute;
+        text-align: left;
+        font-size: 3em;
+        left: 0;
+    }
+    .welcome-divider{
+        /* position: absolute; */
+        top: 45%;
+    }
+    .proceed-label{
+        position: absolute;
+        top:-70px;
+        left:10%;
+    }
+    .main-header{
+        left:5%;
+    }
+    .welc.active>h2{
+        margin-top: 150px;
+        font-size: 2.5em;
+    }
+    .welc.active>p,.project-info>p{
+        width: 90%;
+        font-family: 'Supreme', sans-serif;
+        font-size: 1.25em;
+    }
+    .programmer-ill{
+        width:400px;
+        height: auto;
+        top:-150px;
+        right:50%;
+      }
+    .programmer-ill>img{
+        transform: scale(.25);
+    }
+
+    .project-info>h3{
+      font-size: 1.5em;
+    }
+    .project-info>img{
+        position: absolute;
+        width:400px;
+        height: auto;
+        top:30%;
+        left: 0;
+    }
+    .links-info>h3{
+        font-size: 2em;
+    }
 }
 .contact-section{
     display: none;
