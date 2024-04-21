@@ -152,6 +152,7 @@ body{
 
 .main-site{
     display: none;
+    width: 100%;
     height: 100%;
     position: relative;
     overflow: hidden;
@@ -306,6 +307,7 @@ body{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    flex-wrap: wrap;
 }
 .project-example{
     width:24%;
@@ -489,11 +491,89 @@ body{
         position: absolute;
         width:400px;
         height: auto;
-        top:30%;
+        top:45%;
+        left: -10%;
+    }
+    .project-example{
+        width:50%;
+        height: 50%;
+        cursor: pointer;
+        box-shadow: 0 0 5px rgba(0,0,0,.05), 2px 2px 5px rgba(0,0,0,.1);
+        padding-top: 25px;
+    }
+    .side-title{
+        font-size: 1em;
+        height: 900px;
+    }
+    .right-title{
+        right:25px;
+    }
+    
+    .left-title{
+        left:25px;
+    }
+    .qual.active{
+        margin-top: 125px;
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        padding-inline: 50px;
+    }
+    .qual-web{
+        width:100%;
         left: 0;
+        padding:0;
+        /* overflow: hidden; */
+    }
+    .qual-web>h3{
+        font-size: 1.5em;
+    }
+    .qual-web>p{
+        font-size: 1.25em;
+    }
+    .skill-list{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-top: 10px;
+    }
+    .skill-list li{
+        width: 30%;
+        margin-block: 10px;
+        /* border:2px solid blue; */
+    }
+    .skill-list li img,.skill-list li i{
+        margin-right: 5px;
+    }
+    .gap{
+        display: none;
+    }
+    .qual-gen{
+        width:100%;
+        padding:0;
+    }
+    .qual-gen>h3{
+        font-size: 1.5em;
+    }
+    .qual-gen>p{
+        font-size: 1.25em;
+    }
+    .more-info.active{
+        padding-left: 25px;
+        padding-top: 50px;
+    }
+    .more-info.active>h2{
+        font-size: 1.5em;
+    }
+    .more-info.active>p{
+        font-family: 'Supreme',sans-serif;
+        font-size: 1em;
     }
     .links-info>h3{
-        font-size: 2em;
+        font-size: 1.5em;
+    }
+    .column>img{
+        display: none;
     }
 }
 .contact-section{
