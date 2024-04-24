@@ -41,25 +41,25 @@
       <div class="qual-web">
         <h3>Web Skills</h3>
         <ul class="skill-list">
-          <li><i class="fa fa-html5 small"></i>HTML</li>
-          <li><i class="fa-brands fa-css3-alt small"></i></i>CSS</li>
-          <li><i class="fa-brands fa-js small"></i>Javascript</li><li class="gap"></li>
+          <li><i class="fa fa-html5 small"></i><span>HTML</span></li>
+          <li><i class="fa-brands fa-css3-alt small"></i></i><span>CSS</span></li>
+          <li><i class="fa-brands fa-js small"></i><span>Javascript</span></li><li class="gap"></li>
 
-          <li><i class="fa-brands fa-python small"></i>Python</li>
-          <li><img src="../static/Flask.svg" width="25px"/>Flask</li>
+          <li><i class="fa-brands fa-python small"></i><span>Python</span></li>
+          <li><img src="../static/Flask.svg" width="25px"/><span>Flask</span></li>
 
-          <li><img src="../static/api-svgrepo-com.svg" width="25px"/>RestAPI</li>
-          <li><i class="fa-brands fa-node-js small"></i>NodeJs</li>
-          <li><i class="fa-solid fa-database small"></i>SQL</li>
+          <li><img src="../static/api-svgrepo-com.svg" width="25px"/><span>RestAPI</span></li>
+          <li><i class="fa-brands fa-node-js small"></i><span>NodeJs</span></li>
+          <li><i class="fa-solid fa-database small"></i><span>SQL</span></li>
         </ul>
       </div>
       <div class="qual-gen">
         <h3>Software Skills</h3>
         <ul class="skill-list">
-          <li><img src="../static/icons8-c++.svg" width="30px"></i>C++</li>
-          <li><img src="../static/icons8-c-programming.svg" width="30px"/>C</li>
-          <li><i class="fa-brands fa-java small"></i>Java</li>
-          <li><i class="fa-brands fa-python small"></i>Python</li>
+          <li><img src="../static/icons8-c++.svg" width="30px"></i><span>C++</span></li>
+          <li><img src="../static/icons8-c-programming.svg" width="30px"/><span>C</span></li>
+          <li><i class="fa-brands fa-java small"></i><span>Java</span></li>
+          <li><i class="fa-brands fa-python small"></i><span>Python</span></li>
         </ul>
       </div>
     </div>  
@@ -78,6 +78,91 @@
   </div>
 
   <div class="projects"> 
+    <div class="project-display-container">
+      <div class="project-display">
+        <span style="cursor: pointer;position: absolute;right: 20px;top:10px;font-size:2rem;" onclick="closeProj()">&times</span>
+        <div class="project-image" style="border:#323232 solid 1px">
+          <img src="../static/Portfolio-thumb.png"/>
+        </div>
+        <div class="project-specs">
+          <h5>Technology used</h5>
+          <ul class="skill-list">
+            <li><i class="fa fa-html5 small"></i>HTML</li>
+            <li><i class="fa-brands fa-css3-alt small"></i></i>CSS</li>
+            <li><i class="fa-brands fa-js small"></i>Javascript</li>
+  
+            <li><i class="fa-brands fa-python small"></i>Python</li>
+            <li><img src="../static/Flask.svg" width="25px"/>Flask</li>
+          </ul>
+          Links:
+          <a href="#">Documentation,</a>
+          <a href="#">Repository</a>
+        </div>
+        <div class="project-description">
+          <p>My Portfolio website made from scratch as a basic flask/python app showing the use of web coding languages such as 
+            CSS, HTML and JavaScript as well as minimalist and typography design styles. The design is somewhat based on gaming
+          as listed in the about me being an interest, thus the site controls are set up as up, down, left, right and requiring
+        hitting start (clicking proceed) to use the website.</p>
+        </div>
+      </div>
+    </div>
+    <div class="project-display-container">
+      <div class="project-display">
+        <span style="font-size: x-large;position: absolute;top:.75%;right: 1.25%;cursor: pointer;" onclick="closeProj()">&times</span>
+        <div class="project-image" style="border:#323232 solid 1px">
+          <img src="../static/Recom-thumb.png" alt="Recommendation-Thumbnail"/>
+        </div>
+        <div class="project-specs">
+          <h5>Technology used</h5>
+          <ul class="skill-list">
+            <li><i class="fa fa-html5 small"></i>HTML</li>
+            <li><i class="fa-brands fa-css3-alt small"></i></i>CSS</li>
+            <li><i class="fa-brands fa-js small"></i>Javascript</li>
+  
+            <li><i class="fa-brands fa-python small"></i>Python</li>
+            <li><img src="../static/Flask.svg" width="25px"/>Flask</li>
+
+            <li><i class="fa-solid fa-database small"></i><span>SQL</span></li>
+          </ul>
+          Links:
+          <a href="https://docs.google.com/document/d/1P_6q3n2TwgXkhUwpM1ekMiLlGJoyY8Nq/edit?usp=sharing&ouid=110123445171686219623&rtpof=true&sd=true" target="_blank">Documentation</a>,
+          <a href="https://github.com/COMP3613-Project/Recommendation-app" target="_blank">Repository</a>
+        </div>
+        <div class="project-description">
+          <p>First major University project. A website that allows students to sign in and request recommendations from teachers.
+            This utilizes a python/flask backend handling routes and model controllers as well as SQL database manipulation. Login 
+            functionality is also included and user specific functions are set in place where specific parties are permitted to 
+            interact with recommendations and requests in their respective manners.Site may not be hosted due to resource constraints.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="project-display-container">
+      <div class="project-display">
+        <span style="font-size: x-large;position: absolute;top:.75%;right: 1.25%;cursor: pointer;" onclick="closeProj()">&times</span>
+        <div class="project-image" style="border:#323232 solid 1px">
+          <img src="../static/Morpho-thumb.png" alt="Morpho-thumbnail"/>
+        </div>
+        <div class="project-specs">
+          <h5>Technology used</h5>
+          <ul class="skill-list">
+            <li><i class="fa-brands fa-python small"></i>Python</li>
+            <li><img src="../static/Flask.svg" width="25px"/>Flask</li>
+            <li><img src="../static/api-svgrepo-com.svg" width="25px"/>RestAPI</li>
+          </ul>
+          Links:
+          <a href="#">Documentation</a>,
+          <a href="https://github.com/SimpleSolutions-Final-Year/python_server?tab=readme-ov-file" target="_blank">Repository</a>
+        </div>
+        <div class="project-description">
+          <p>An API made for educational purposes. Consists of a series of algorithms that when given a word can produce:
+            <li>An example sentence(Or allow for one to be entered)</li>  <li>A definition of the word</li>
+            <li>A list of words of the same word family.</li>  <li>A list of words with similar prefixes/suffixes.</li>
+            <li>A list of words that contain the same morpheme.</li>
+          </p>
+        </div>
+      </div>
+    </div>
     <div class="main-header">
       <h1>Projects</h1>
     </div>
@@ -97,93 +182,20 @@
           <div class="project-thumb"><img src="../static/Portfolio-thumb.png"/></div>
           <p>Click for more info</p>
         </div>
-        <div class="project-display">
-          <span style="font-size: x-large;position: absolute;top:.75%;right: 1.25%;cursor: pointer;" onclick="closeProj()">&times</span>
-          <div class="project-image" style="border:#323232 solid 1px">
-            <img src="../static/Portfolio-thumb.png"/>
+        
+          <div class="project-example" onclick="showProject(2)">
+            <div class="project-title">Recommendation Application</div>
+            <div class="project-thumb"><img src="../static/Recom-thumb.png" alt="Recommendation-Thumbnail"/></div>
+            <p>Click for more info</p>
           </div>
-          <div class="project-specs">
-            <h5>Technology used</h5>
-            <ul class="skill-list">
-              <li><i class="fa fa-html5 small"></i>HTML</li>
-              <li><i class="fa-brands fa-css3-alt small"></i></i>CSS</li>
-              <li><i class="fa-brands fa-js small"></i>Javascript</li>
-    
-              <li><i class="fa-brands fa-python small"></i>Python</li>
-              <li><img src="../static/Flask.svg" width="25px"/>Flask</li>
-            </ul>
-            Links:
-            <a href="#">Documentation,</a>
-            <a href="#">Repository</a>
-          </div>
-          <div class="project-description">
-            <p>My Portfolio website made from scratch as a basic flask/python app showing the use of web coding languages such as 
-              CSS, HTML and JavaScript as well as minimalist and typography design styles. The design is somewhat based on gaming
-            as listed in the about me being an interest, thus the site controls are set up as up, down, left, right and requiring
-          hitting start (clicking proceed) to use the website.</p>
-          </div>
-        </div>
-        <div class="project-example" onclick="showProject(2)">
-          <div class="project-title">Recommendation Application</div>
-          <div class="project-thumb"><img src="../static/Recom-thumb.png" alt="Recommendation-Thumbnail"/></div>
-          <p>Click for more info</p>
-        </div>
-        <div class="project-display">
-          <span style="font-size: x-large;position: absolute;top:.75%;right: 1.25%;cursor: pointer;" onclick="closeProj()">&times</span>
-          <div class="project-image" style="border:#323232 solid 1px">
-            <img src="../static/Recom-thumb.png" alt="Recommendation-Thumbnail"/>
-          </div>
-          <div class="project-specs">
-            <h5>Technology used</h5>
-            <ul class="skill-list">
-              <li><i class="fa fa-html5 small"></i>HTML</li>
-              <li><i class="fa-brands fa-css3-alt small"></i></i>CSS</li>
-              <li><i class="fa-brands fa-js small"></i>Javascript</li>
-    
-              <li><i class="fa-brands fa-python small"></i>Python</li>
-              <li><img src="../static/Flask.svg" width="25px"/>Flask</li>
-            </ul>
-            Links:
-            <a href="https://docs.google.com/document/d/1P_6q3n2TwgXkhUwpM1ekMiLlGJoyY8Nq/edit?usp=sharing&ouid=110123445171686219623&rtpof=true&sd=true" target="_blank">Documentation</a>,
-            <a href="https://github.com/COMP3613-Project/Recommendation-app" target="_blank">Repository</a>
-          </div>
-          <div class="project-description">
-            <p>First major University project. A website that allows students to sign in and request recommendations from teachers.
-              This utilizes a python/flask backend handling routes and model controllers as well as SQL database manipulation. Login 
-              functionality is also included and user specific functions are set in place where specific parties are permitted to 
-              interact with recommendations and requests in their respective manners.Site may not be hosted due to resource constraints.
-            </p>
-          </div>
-        </div>
+          
         <div class="project-example" onclick="showProject(3)">
           <div class="project-title">Morphological Module</div>
           <div class="project-thumb"><img src="../static/Morpho-thumb.png" alt="Morpho-Thumbnail"/></div>
           <p>Click for more info</p>
         </div>
-        <div class="project-display">
-          <span style="font-size: x-large;position: absolute;top:.75%;right: 1.25%;cursor: pointer;" onclick="closeProj()">&times</span>
-          <div class="project-image" style="border:#323232 solid 1px">
-            <img src="../static/Morpho-thumb.png" alt="Morpho-thumbnail"/>
-          </div>
-          <div class="project-specs">
-            <h5>Technology used</h5>
-            <ul class="skill-list">
-              <li><i class="fa-brands fa-python small"></i>Python</li>
-              <li><img src="../static/Flask.svg" width="25px"/>Flask</li>
-              <li><img src="../static/api-svgrepo-com.svg" width="25px"/>RestAPI</li>
-            </ul>
-            Links:
-            <a href="#">Documentation</a>,
-            <a href="https://github.com/SimpleSolutions-Final-Year/python_server?tab=readme-ov-file" target="_blank">Repository</a>
-          </div>
-          <div class="project-description">
-            <p>An API made for educational purposes. Consists of a series of algorithms that when given a word can produce:
-              <li>An example sentence(Or allow for one to be entered)</li>  <li>A definition of the word</li>
-              <li>A list of words of the same word family.</li>  <li>A list of words with similar prefixes/suffixes.</li>
-              <li>A list of words that contain the same morpheme.</li>
-            </p>
-          </div>
-        </div>
+        
+
         <!-- <div class="project-example">
           Project Name
         </div> -->
@@ -231,9 +243,11 @@
             <img src="../static/undraw_personal_text_re_vqj3.svg"/>
           </div>
           <div class="column">
-            <form action="https://api.web3forms.com/submit" method="POST">
+            <form method="POST" id="form">
               <input type="hidden" name="access_key" value="a9094d35-add9-407c-88fb-a28f42c08e64">
-              <input type="hidden" name="redirect" value="/success">
+              <input type="hidden" name="subject" value="New Submission from Web3Forms">
+              <input type="checkbox" name="botcheck" id="" style="display: none;">
+              <!-- <input type="hidden" name="redirect" value="/success"> -->
               <label for="name">Name</label>
               <input type="text" id="name" name="name" placeholder="Your name..">
               <label for="email">Email Address</label>
@@ -241,6 +255,7 @@
               <label for="message">Message</label>
               <textarea id="message" name="message" placeholder="Write something.." style="height:170px"></textarea>
               <input type="submit" value="Submit">
+              <!-- <div id="result"></div> -->
             </form>
           </div>
         </div>
@@ -260,7 +275,17 @@
 
     function plusSlides(n) {
       // removeAni();
-      showSlides(slideIndex += n);
+      // showSlides(slideIndex += n);
+      let current = document.getElementsByClassName(stages[level-1]);
+
+      if(n==1){
+        current[slideIndex-1].classList.add("move-left");
+      }
+      if(n==-1)
+        current[slideIndex-1].classList.add("move-right");
+      // setTimeout(hide,500,curr[0])
+      // setTimeout(removeAni,500);
+      setTimeout(showSlides,500,slideIndex += n);
     }
 
     function showSlides(n) {
@@ -273,6 +298,8 @@
       if (n < 1) {slideIndex = slides.length}
       for (i = 0; i < slides.length; i++) {
        slides[i].classList.remove("active");
+       slides[i].classList.remove("move-left");
+       slides[i].classList.remove("move-right");
       }
       slides[slideIndex-1].classList.add("active");
       if(level==2 && slideIndex==2){
@@ -312,6 +339,9 @@
   function show(element){
     element.style.display="block";
   }
+  function hide(element){
+    element.style.display="none"
+  }
   function deactivate(element){
     element.classList.remove("active")
   }
@@ -339,7 +369,7 @@
   }
 
   function removeAni(){
-    let animations = ["fadein","fadeout","right-ani","left-ani","fadein-rev","fadeout-rev","right-ani-rev","left-ani-rev"];
+    let animations = ["fadein","fadeout","right-ani","left-ani","fadein-rev","fadeout-rev","right-ani-rev","left-ani-rev","up","down"];
 
     let right = document.getElementsByClassName("full-page-text3");
     let left = document.getElementsByClassName("full-page-text2");
@@ -352,9 +382,12 @@
     let siteArrows=document.getElementsByClassName("site-arrows");
     let leftbtn = document.getElementsByClassName("prev");
     let rightbtn = document.getElementsByClassName("next");
+    let projects=document.getElementsByClassName("projects");
+    let contacts=document.getElementsByClassName("contact-section");
+    let links=document.getElementsByClassName("links-section");
 
     let elements = [right[0],left[0],title[0],divider[0],welcomeSection[0],mainSite[0],mainInfo[0],siteMap[0],
-    siteArrows[0],siteArrows[1],leftbtn[0],rightbtn[0]];
+    siteArrows[0],siteArrows[1],leftbtn[0],rightbtn[0],projects[0],contacts[0],links[0]];
 
     for(let i=0;i<animations.length;i++){
       for(let k=0;k<elements.length;k++){
@@ -370,9 +403,20 @@
   
    function levelUp(n) {
     // removeAni()
+    // slideIndex=0;
       let curr=document.getElementsByClassName(levels[level]);
-      curr[0].style.display="none";
-      showLevel(level += n);
+      if(n==-1 && level==1){
+        hide(curr[0]);
+        // removeAni();
+        showLevel(level+=n);
+      }
+      if(n==1)
+        curr[0].classList.add("up");
+      if(n==-1 && level!=1)
+        curr[0].classList.add("down");
+      setTimeout(hide,500,curr[0])
+      setTimeout(removeAni,500)
+      setTimeout(showLevel,500,level += n);
     }
     function showLevel(n) {
       // console.log(n)
@@ -402,7 +446,6 @@
         slides[0].style.display="block";
       }
       else if (n == 0){
-        // console.log("edge")
         revAni();
       }
       else{
@@ -415,14 +458,71 @@
       // slides[level-1].classList.add("active");
    }
    function showProject(n){
-    let projects=document.getElementsByClassName("project-display");
+    let projects=document.getElementsByClassName("project-display-container");
     projects[n-1].style.display="block";
    }
    function closeProj(){
-    let projects=document.getElementsByClassName("project-display");
+    let projects=document.getElementsByClassName("project-display-container");
     for(let i=0;i<projects.length;i++)
       projects[i].style.display="none"
    }
+
+   function mapMove(j,k){
+    console.log(level)
+    levelUp(-level+j);
+    if(k!=0)
+     setTimeout(plusSlides,250,k-1);
+    // showSlides(slideIndex-(slideIndex-k));
+    console.log(`${level} mapmove ${-level+j}`);
+   }
+  //  window.onload = function() {
+  //       Reset the form fields when the page loads
+  //       document.getElementById("form").reset();
+  //   };
+
+const form = document.getElementById('form');
+const result = document.getElementById('result');
+
+form.addEventListener('submit', function(e) {
+  e.preventDefault();
+  const formData = new FormData(form);
+  const object = Object.fromEntries(formData);
+  const json = JSON.stringify(object);
+  // result.innerHTML = "Please wait..."
+
+    fetch('https://api.web3forms.com/submit', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            },
+            body: json
+        })
+        .then(async (response) => {
+            let json = await response.json();
+            if (response.status == 200) {
+                // result.innerHTML = json.message;
+                submitAlert(json.message);
+            } else {
+                console.log(response);
+                submitAlert(json.message);
+            }
+        })
+        .catch(error => {
+            console.log(error);
+            // result.innerHTML = "Something went wrong!";
+            submitAlert("Something went wrong!")
+        })
+        .then(function() {
+            form.reset();
+            setTimeout(() => {
+                result.style.display = "none";
+            }, 3000);
+        });
+});
+function submitAlert(message) {
+  alert(message);
+}
   </script>
 </body>
 <style>
