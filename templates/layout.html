@@ -25,7 +25,7 @@
       <div class="main-header">
         <h1>Site Map</h1>
       </div>
-      <span style="cursor: pointer;position: absolute;right: 50px;top:50px;font-size:2rem;" onclick="hideMap()">&times</span>
+      <span class="closebtn" onclick="hideMap()">&times</span>
       <div class="map-stage" onclick="mapMove(0,0)">
         <div class="stage-title">
           Welcome
@@ -308,6 +308,47 @@
     .site-arrows:nth-child(2n){
       bottom: 30px;
       right:0px;
+    }
+    .stage-title{
+      position:absolute;
+      width: 70px;
+      height: 50px;
+      /* border:10px purple solid; */
+    }
+    .map{
+      padding-top: 150px;
+    }
+    .map-stage{
+      --box-width:75px;
+      height: 50px;
+      margin-bottom: 15px;
+    }
+    .map-stage::before{
+      margin-top: 45px;
+      height: 21px;
+      width: 20px;
+      left: 46%;
+      border-inline: 3px solid #005959;
+    }
+    .map-row{
+      --mid-gap:20px;
+      --half-box:calc(var(--box-width)/2);
+      --mid-map:calc(var(--half-box)+var(--mid-gap));
+      --full-gap:calc(var(--mid-gap)+var(--box-width));
+      margin-left:calc(50% - var(--full-gap));
+    }
+    .map-row>.map-stage{
+      margin-inline:10px;
+    }
+    .map-row>.map-stage::after{
+      position: absolute;
+      content: '';
+      margin-top: 15px;
+      margin-left: 33px;
+      height: 18px;
+      width: 25px;
+      background-color: #d9dddc;
+      border-block: 2px solid #323232;
     }
     }
   </style>
