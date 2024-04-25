@@ -445,7 +445,7 @@ body{
         left:5px;
     }
     .proceed-button{
-        bottom:75px;
+        bottom:30px;
         cursor: pointer;
         width:90%;
         height: 50px;
@@ -456,18 +456,19 @@ body{
         top:20%;
         font-size: 5em;
         text-align: left;
+        margin-left: 20px;
     }
     .full-page-text2{
         font-size: 2em;
         top:55%;
-        left:0;
+        left:20px;
     }
     .full-page-text3{
         position: absolute;
         text-align: left;
         top:10%;
         font-size: 3em;
-        left: 0;
+        left: 20px;
     }
     .welcome-area{
         height: 100dvh;
