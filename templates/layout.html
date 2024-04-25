@@ -110,57 +110,6 @@
         let map=document.getElementsByClassName("map-container");
         map[0].style.display="none"
       }
-  //     let slideIndex = 1;
-  //   let colorIndex = 1;
-  //   let colorsArr=["#d9dddc","#323232","green"]
-  //   //linear-gradient(rgba(21,0,27,1) 0%, rgba(144,0,187,1) 25%, rgba(196,0,255,1) 50%, rgba(144,0,187,1) 75%, rgba(21,0,27,1) 100%)
-
-  //   function plusSlides(n) {
-  //     showSlides(slideIndex += n);
-  //     bgSwap(colorIndex+=n)
-  //   }
-
-  //   function bgSwap(n){
-  //     let body=document.body;
-  //     body.style.background = colorsArr[colorIndex-1];
-  //   }
-  //   function showSlides(n) {
-  //     let i;
-  //     document.getElementById
-  //     let slides = document.getElementsByClassName("main-info");
-  //     if (n > slides.length) {slideIndex = 1}
-  //     if (n < 1) {slideIndex = slides.length}
-  //     for (i = 0; i < slides.length; i++) {
-  //      slides[i].classList.remove("active");
-  //     }
-  //     slides[slideIndex-1].classList.add("active");
-  //  }
-
-  //  function revAni(){
-  //   let right = document.getElementsByClassName("full-page-text3");
-  //     let left = document.getElementsByClassName("full-page-text2");
-  //     let title = document.getElementsByClassName("full-page-text");
-  //     let divider = document.getElementsByClassName("welcome-divider");
-  //     let welcomeSection =document.getElementsByClassName("welcome-area");
-  //     let mainInfo = document.getElementsByClassName("main-info");
-  //     let mainSite =document.getElementsByClassName("main-site");
-  //     let siteMap=document.getElementsByClassName("site-map");
-  //     let siteArrows=document.getElementsByClassName("site-arrows");
-  //     let leftbtn = document.getElementsByClassName("prev");
-  //     let rightbtn = document.getElementsByClassName("next");
-  //     right[0].classList.add("right-ani-rev");
-  //     left[0].classList.add("left-ani-rev");
-  //     title[0].classList.add("fadeout-rev");
-  //     divider[0].classList.add("fadeout-rev");
-  //     welcomeSection[0].classList.add("fadeout-rev");
-  //     mainInfo[0].classList.add("fadein-rev");
-  //     mainSite[0].style.display="none";
-  //     siteMap[0].classList.add("fadein-rev");
-  //     siteArrows[0].classList.add("fadein-rev");
-  //     siteArrows[1].classList.add("fadein-rev");
-  //     leftbtn[0].classList.add("fadein-rev");
-  //     rightbtn[0].classList.add("fadein-rev");
-  //  }
     </script>
   </body>
   <style>
@@ -230,7 +179,7 @@
     .map{
       display: block;
       position: absolute;
-      padding-top: 200px;
+      padding-top: 100px;
       top: 10%;
       left: 10%;
       height: 80vh;
@@ -247,23 +196,25 @@
       /* border:10px purple solid; */
     }
     .map-stage{
+      --box-width:150px;
       cursor: pointer;
-      width: 100px;
-      height: 50px;
-      border:2px solid #323232;
-      outline: 2px solid #005959;
-      outline-offset: 2px;
+      width: var(--box-width);
+      height: 75px;
+      border:3px solid #005959;
+      /* border:2px solid #323232; */
+      /* outline: 2px solid #005959; */
+      /* outline-offset: 2px; */
       margin: auto;
-      margin-bottom: 15px;
-      /* overflow: hidden; */
+      margin-bottom: 20px;
+      overflow: hidden;
     }
     .map-stage::before{
       position: absolute;
       content: '';
-      margin-top: 47px;
+      margin-top: 70px;
       left:49.5%;
-      height: 18px;
-      width: 15px;
+      height: 25px;
+      width: 20px;
       background-color: #d9dddc;
       border-inline: 2px solid #323232;
       /* overflow: hidden; */
@@ -272,9 +223,14 @@
       visibility: hidden;
     }
     .map-row{
+      --mid-gap:20px;
+      --half-box:calc(var(--box-width)/2);
+      --mid-map:calc(var(--half-box)+var(--mid-gap));
+      --full-gap:calc(var(--mid-gap)+var(--box-width));
       display: flex;
       flex-direction: row;
-      margin-left:35.25% ;
+      margin-left:calc(50% - 255px);
+      overflow: hidden;
     }
     .map-row>.map-stage{
       margin-inline:10px;
@@ -341,7 +297,7 @@
     }
     @media only screen and (max-width: 600px){  
       .site-map{
-        bottom:75px;
+        bottom:10%;
       }
 
       .site-arrows{
