@@ -631,6 +631,10 @@ input[type=text], select, textarea {
     .project-display-container>.project-display{
       overflow: scroll;
     }
+    .project-display-container>.project-display{
+        top: 10%;
+        height: 80dvh;
+    }
     .project-image{
         position:absolute;
         top:7%;
@@ -685,10 +689,10 @@ input[type=text], select, textarea {
         /* overflow: hidden; */
     }
     .qual-web>h3{
-        font-size: 1.5em;
+        font-size: 1.25em;
     }
     .qual-web>p{
-        font-size: 1.25em;
+        font-size: .5em;
     }
     .skill-list{
         display: flex;
@@ -704,7 +708,7 @@ input[type=text], select, textarea {
     .skill-list li >span{
         display: block;
         width:100%;
-        font-size: small;
+        font-size: .75em;
     }
     .skill-list li img,.skill-list li i{
         margin-right: 5px;
@@ -717,7 +721,9 @@ input[type=text], select, textarea {
         padding:0;
     }
     .qual-gen>h3{
-        font-size: 1.5em;
+        font-size: 1.25em;
+        margin:0 !important;
+        /* color:red; */
     }
     .qual-gen>p{
         font-size: 1.25em;
