@@ -38,6 +38,7 @@ body{
     padding-top: 10px;
     /* overflow: hidden; */
     text-align: center;
+    /* color:black; */
 
     transition: background-color .2s ease-in;
 }
@@ -53,10 +54,16 @@ body{
     color:#005959;
     font-family: 'Supreme',sans-serif;
 }
-
-.full-page-text{
+.name-l{
     position: absolute;
+    /* border:1px solid gold; */
+    height: auto;
     top:30%;
+    width: 100%;
+}
+.full-page-text{
+    /* position: absolute; */
+    /* top:30%; */
     right:10px;
     font-family: 'Supreme', sans-serif;
     text-align: right;
@@ -64,6 +71,17 @@ body{
     font-size: 9.5em;
 }
 
+
+.welcome-divider{
+    position: absolute;
+    top: 90%;
+    left: 2.5%;
+    border: none;
+    height: 3px;
+    background: black;
+    margin-bottom: 50px;
+    width:95%;
+}
 /* @media only screen and (min-width: 992px) {
     .full-page-text{
         font-size: 8em;
@@ -120,16 +138,6 @@ body{
     font-size: 6em;
 }
 
-.welcome-divider{
-    position: absolute;
-    top: 65%;
-    left: 2.5%;
-    border: none;
-    height: 3px;
-    background: black;
-    margin-bottom: 50px;
-    width:95%;
-}
 
 .next{
     /* opacity:0; */
@@ -437,6 +445,90 @@ body{
     top:50px;
     font-size:2rem;
 }
+.contact-section{
+    display: none;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+.contact-info{
+    position: relative;
+    display: none;
+    margin: auto;
+    margin-top: 100px;
+    padding-top: 100px;
+    width:80%;
+    height: 80vh;
+    /* text-align: center; */
+    /* border: 10px solid black; */
+}
+.contact-info.active{
+    display:block;
+    position: relative;
+}
+
+
+/* Style inputs */
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #323232;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+  }
+  
+  input[type=submit] {
+    background-color: #005959;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+  }
+
+  ::placeholder {
+    color: #9b9b9b !important;
+    opacity: 1; /* Firefox */
+  }
+  
+  ::-ms-input-placeholder { /* Edge 12-18 */
+    color: #9b9b9b !important;
+  }
+  
+  input[type=submit]:hover {
+    background-color: #005959;
+  }
+  
+  /* Style the container/contact section */
+  .form-container {
+    border-radius: 5px;
+    /* background-color: #f2f2f2; */
+    padding: 10px;
+  }
+  label{
+    color: #323232 !important;
+    font-family: 'Supreme',sans-serif;
+  }
+  
+  /* Create two columns that float next to eachother */
+  .column {
+    float: left;
+    width: 50%;
+    margin-top: 6px;
+    padding: 20px;
+  }
+  .column>img{
+    position: absolute;
+    left: -10%;
+    bottom: 1%;
+    transform: scale(.7);
+}
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
   /*mobile scaling*/
   @media only screen and (max-width: 600px){  
     body{
@@ -459,11 +551,19 @@ body{
         padding-top: 10px;
         right:5%;
     }
+    .name-l{
+        top:20%;
+        width: 99%;
+        /* margin-left: 10px; */
+    }
+    .welcome-divider{
+        width: 95%;
+    }
     .full-page-text{
         top:20%;
         font-size: 5em;
         text-align: left;
-        margin-left: 20px;
+        margin-left: 10px;
     }
     .full-page-text2{
         font-size: 2em;
@@ -484,14 +584,10 @@ body{
     .main-info{
         height: 80dvh;
     }
-    .welcome-divider{
-        /* position: absolute; */
-        top: 45%;
-    }
     .proceed-label{
         position: absolute;
         top:-70px;
-        left:10%;
+        left:17%;
     }
     .main-header{
         left:5%;
@@ -608,6 +704,7 @@ body{
     .skill-list li >span{
         display: block;
         width:100%;
+        font-size: small;
     }
     .skill-list li img,.skill-list li i{
         margin-right: 5px;
@@ -647,92 +744,29 @@ body{
         top:5px;
         font-size:2rem;
     }
-    
-}
-.contact-section{
-    display: none;
-    height: 100%;
-    position: relative;
-    overflow: hidden;
-}
-.contact-info{
-    position: relative;
-    display: none;
-    margin: auto;
-    margin-top: 100px;
-    padding-top: 100px;
-    width:80%;
-    height: 80vh;
-    /* text-align: center; */
-    /* border: 10px solid black; */
-}
-.contact-info.active{
-    display:block;
-    position: relative;
+    .contact-section{
+        display: none;
+        height: 100%;
+        position: relative;
+        overflow: hidden;
+    }
+    .contact-info{
+        position: relative;
+        display: none;
+        margin: auto;
+        margin-top: 175px;
+        padding-top: 0;
+        width:80%;
+        height: 60dvh;
+        /* text-align: center; */
+        border: 2px solid #005959;
+        border-radius: 1px;
+    }  
+    .column:first-child {
+        display: none;
+      }
 }
 
-
-/* Style inputs */
-input[type=text], select, textarea {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #323232;
-    margin-top: 6px;
-    margin-bottom: 16px;
-    resize: vertical;
-  }
-  
-  input[type=submit] {
-    background-color: #005959;
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    cursor: pointer;
-  }
-
-  ::placeholder {
-    color: #9b9b9b !important;
-    opacity: 1; /* Firefox */
-  }
-  
-  ::-ms-input-placeholder { /* Edge 12-18 */
-    color: #9b9b9b !important;
-  }
-  
-  input[type=submit]:hover {
-    background-color: #005959;
-  }
-  
-  /* Style the container/contact section */
-  .form-container {
-    border-radius: 5px;
-    /* background-color: #f2f2f2; */
-    padding: 10px;
-  }
-  label{
-    color: #323232 !important;
-    font-family: 'Supreme',sans-serif;
-  }
-  
-  /* Create two columns that float next to eachother */
-  .column {
-    float: left;
-    width: 50%;
-    margin-top: 6px;
-    padding: 20px;
-  }
-  .column>img{
-    position: absolute;
-    left: -10%;
-    bottom: 1%;
-    transform: scale(.7);
-}
-  /* Clear floats after the columns */
-  .row:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
   
   /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
   @media screen and (max-width: 600px) {
