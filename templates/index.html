@@ -405,13 +405,17 @@
     // removeAni()
     // slideIndex=0;
       let curr=document.getElementsByClassName(levels[level]);
+      let next=document.getElementsByClassName(levels[level+1]);
+
       if(n==-1 && level==1){
         hide(curr[0]);
         // removeAni();
         showLevel(level+=n);
       }
-      if(n==1)
+      if(n==1){
         curr[0].classList.add("up");
+        // next[0].classList.add("fadein");
+      }
       if(n==-1 && level!=1)
         curr[0].classList.add("down");
       setTimeout(hide,500,curr[0])
@@ -467,13 +471,30 @@
       projects[i].style.display="none"
    }
 
+   function hideMap(){
+        let map=document.getElementsByClassName("map");
+        map[0].style.display="none"
+      }
+
    function mapMove(j,k){
-    console.log(level)
+    console.log(slideIndex)
     levelUp(-level+j);
-    if(k!=0)
-     setTimeout(plusSlides,250,k-1);
+    if(k!=0){
+      if(slideIndex>k){
+        console.log(`bts from ${slideIndex} to ${slideIndex +k-slideIndex}`);
+        plusSlides(k-slideIndex);
+      }
+      if(slideIndex<k){
+        console.log(`stb from ${slideIndex} to ${slideIndex+(k-slideIndex)}`);
+        plusSlides(k-slideIndex);
+      }
+      else
+      plusSlides(0);
+    }
+    setTimeout(hideMap,900);
+     
     // showSlides(slideIndex-(slideIndex-k));
-    console.log(`${level} mapmove ${-level+j}`);
+    // console.log(`${level} mapmove ${-level+j}`);
    }
   //  window.onload = function() {
   //       Reset the form fields when the page loads
