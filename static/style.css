@@ -760,10 +760,10 @@ input[type=text], select, textarea {
         position: relative;
         display: none;
         margin: auto;
-        margin-top: 175px;
+        margin-top: 150px;
         padding-top: 0;
         width:80%;
-        height: 60dvh;
+        height: 65dvh;
         /* text-align: center; */
         border: 2px solid #005959;
         border-radius: 1px;
