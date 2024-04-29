@@ -64,9 +64,9 @@ body{
 .full-page-text{
     /* position: absolute; */
     /* top:30%; */
-    right:10px;
+    margin-left:2%;
     font-family: 'Supreme', sans-serif;
-    text-align: right;
+    /* text-align: right; */
     font-weight: 700;
     font-size: 9.5em;
 }
@@ -131,9 +131,10 @@ body{
 }
 .full-page-text3{
     position: absolute;
-    right:0;
+    left:2%;
+    top:10%;
     font-family: 'Supreme', sans-serif;
-    text-align: right;
+    /* text-align: right; */
     font-weight: 400;
     font-size: 6em;
 }
@@ -222,6 +223,7 @@ body{
     font-family: 'Supreme', sans-serif;
     font-size: large;
 }
+
 .programmer-ill{
     position: absolute;
     /* display: inline; */
@@ -311,6 +313,7 @@ body{
     top: 15%;
     transform: scale(.5);
 }
+
 .projects-container{
     position: relative;
     display: flex;
@@ -522,6 +525,22 @@ input[type=text], select, textarea {
     left: -10%;
     bottom: 1%;
     transform: scale(.7);
+}
+.column:nth-child(2){
+    border: 1px solid #005959;
+    border-radius: 5px;
+}
+@media only screen and (min-width:1600px){ /*large screens and monitors*/
+    .welc.active>p,.welc.active>h2{
+        margin-left:200px;
+    }
+    .project-info>img{
+        left: 15%;
+    }
+    .column>img{
+        bottom: 25%;
+        transform: scale(.8);
+    }
 }
   /* Clear floats after the columns */
   .row:after {
