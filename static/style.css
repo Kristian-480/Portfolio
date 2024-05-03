@@ -528,7 +528,7 @@ input[type=text], select, textarea {
 }
 .column:nth-child(2){
     border: 1px solid #005959;
-    border-radius: 5px;
+    border-radius: 15px;
 }
 @media only screen and (min-width:1600px){ /*large screens and monitors*/
     .welc.active>p,.welc.active>h2{
